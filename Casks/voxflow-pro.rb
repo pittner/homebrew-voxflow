@@ -7,6 +7,10 @@ cask "voxflow-pro" do
   desc "Push-to-talk dictation that transcribes on the Mac with WhisperKit"
   homepage "https://bemooore.com/voxflow/mac/?utm_source=homebrew_tap&utm_medium=cask&utm_campaign=brew_tap"
 
+  livecheck do
+    skip "Direct download of a fixed notarized build"
+  end
+
   depends_on macos: ">= :sonoma"
 
   app "VoxFlow.app"
